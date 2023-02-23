@@ -1,0 +1,32 @@
+<div class="loggedin-form">
+<%= link_to '<', pages_path, class: "linked" %>
+    <h2>Log in</h2>
+  </div>
+<div>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-d" ) do |f| %>
+  <div class="field">
+  <br/>
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+  <br/>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field1">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="log-now">
+    <%= f.submit "Log in" %>
+    <%= link_to "Forgot your password?", new_user_password_path, class: "password-forgot" %>
+  </div>
+<% end %>
+</div>
+<%#<%= render "devise/shared/links" %>

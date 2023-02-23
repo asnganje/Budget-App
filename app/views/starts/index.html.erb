@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Payments</h1>
+
+<div id="starts">
+  <% @starts.each do |start| %>
+    <%= render start %>
+    <%#<p>
+      <%= link_to "Show this start", start >
+    </p>%>
+  <% end %>
+</div>
+
+<%= link_to "New start", new_start_path %>
+
+
