@@ -11,7 +11,24 @@
     </div>
   <% end %>
 
+
+  <div class="field">
+    <%= form.text_field :name, placeholder: "Name" %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :amount, placeholder: "Amount" %>
+  </div>
+
+  <div class="categorie-input-container">
+    <%= form.select :cluster_id, Cluster.all.collect {|cluster| [cluster.name, cluster.id]},{include_blank: true}, :required => 'required', class:"form-select" %>
+  </div>
+
+  <div class="add-t-container">
+    <%= form.submit 'SAVE', class:"add-transaction" %>
+  </div>
+
   <div>
-    <%= form.submit %>
+    <%= link_to "Back to charges", clusters_path %>
   </div>
 <% end %>

@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+}
+
+.pages-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90%;
+  padding-top: 4rem;
+}
+
+.pages-container ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 80%;
+  height: 15%;
+}
+
+.pages-container ul li {
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.pages-container ul li:hover {
+  background-color: #3778c257;
+}
+
+.pages-container ul .login-button {
+  padding: 18px;
+  color: #fff;
+  background-color: #3778c2;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.pages-container ul .login-button a {
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.pages-container ul .sign-up-button {
+  padding: 18px;
+  width: 100%;
+  color: #fff;
+  background-color: #92969a;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.pages-container ul .sign-up-button a {
+  font-weight: 600;
+  color: #434b54;
+  text-decoration: none;
+  font-size: 23px;
+}
